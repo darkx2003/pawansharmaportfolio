@@ -1,23 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillInstagram,
+} from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import countapi from 'countapi-js';
 
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
-  
-  // State to store visitor count
-  const [visitorCount, setVisitorCount] = useState(0);
-
-  // Fetch visitor count when component mounts
-  useEffect(() => {
-    countapi.visits('pawan-sharma').then((result) => {
-      setVisitorCount(result.value);
-    });
-  }, []);
-
   return (
     <Container fluid className="footer">
       <Row>
@@ -60,9 +51,6 @@ function Footer() {
               </a>
             </li>
           </ul>
-          <p style={{ color: "white", marginTop: "10px" }}>
-            Unique Visitors: {visitorCount}
-          </p>
         </Col>
       </Row>
     </Container>
