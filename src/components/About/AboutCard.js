@@ -31,7 +31,7 @@ function AboutCard() {
           </ul>
           <br />
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Driven by curiosity, empowered by technology."{" "}
+            "Master of all Cards, Jack of None :)"{" "}
           </p>
           <footer className="blockquote-footer">Pawan Sharma</footer>
         </blockquote>
